@@ -19,12 +19,14 @@ export default function Home() {
         <p className="text-tola-green font-semibold outfit text-xl">
           Hi there👋, I&apos;m
         </p>
-        <h1 className="items-center font-bold md:text-6xl text-3xl roboto typing-effect">
-          OMOTOLA <span className="text-tola-green underline">ODUSANYA.</span>
-        </h1>
-        <h2 className="outfit font-medium text-base text-tola-green animate-name">
-          Frontend Developer
-        </h2>
+        <div>
+          <h1 className="items-center font-bold md:text-6xl text-3xl roboto typing-effect">
+            OMOTOLA <span className="text-tola-green underline">ODUSANYA.</span>
+          </h1>
+          <h2 className="outfit font-medium text-base mt-1 text-tola-green animate-name">
+            Frontend Developer
+          </h2>
+        </div>
         <div className="space-y-3">
           <h2
             className="outfit font-bold text-base text-tola-white animate-name underline"
