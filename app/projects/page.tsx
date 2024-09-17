@@ -65,17 +65,13 @@ export default function Projects() {
             Contact Me
           </p>
           <p className="font-bold md:text-2xl md:max-w-max max-w-[75%] text-sm zilla underline">
-            I would be thrilled to have the opportunity to work with you.
+            I would be thrilled to work with you.
           </p>
           <div className="flex flex-row space-x-2 mt-4">
-            <div className="flex flex-row space-x-2 items-center justify-center">
-              <Link href="mailto:odusanyaomotola64@gmail.com" passHref>
-                <SocialButton bgColor="instagram">
-                  <EmailIcon className="w-5 h-5 text-black" />
-                </SocialButton>
-              </Link>
+            <div className="flex flex-row space-x-1 items-center border border-tola-green p-2 justify-center animate-name">
+              <EmailIcon className="text-tola-white" />
               <Link href="mailto:odusanyaomotola64@gmail.com">
-                <p className="outfit font-medium text-base mt-1 text-tola-green animate-name">
+                <p className="outfit font-medium text-base text-tola-green">
                   odusanyaomotola64@gmail.com
                 </p>
               </Link>
