@@ -6,7 +6,7 @@ export default function Projects() {
   return (
     <div>
       <Header />
-      <div className="text-tola-white md:mx-32 mx-5 pt-20 md:pt-40">
+      <div className="text-tola-white md:mx-32 mx-5 py-20 md:py-40">
         <section>
           <h1 className="items-center font-bold md:text-6xl text-3xl roboto typing-effect">
             My <span className="text-tola-green underline">Projects.</span>
