@@ -57,7 +57,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="https://drive.google.com/file/d/1y1jayHl1CcEsKBdcBQq7EuY2MucCfu7X/view?usp=drivesdk"
+              href="https://drive.google.com/file/d/1OZ2_iI02pyCzrJMdRbj_XPiyLZPV5h8i/view?usp=drivesdk"
               download
               scroll={false}
               target="_blank"
@@ -95,7 +95,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="https://drive.google.com/file/d/1y1jayHl1CcEsKBdcBQq7EuY2MucCfu7X/view?usp=drivesdk"
+                href="https://drive.google.com/file/d/1OZ2_iI02pyCzrJMdRbj_XPiyLZPV5h8i/view?usp=drivesdk"
                 download
                 target="_blank"
                 onClick={() => setMenuOpen(false)}
