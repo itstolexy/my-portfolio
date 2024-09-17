@@ -15,6 +15,7 @@ const config: Config = {
         "tola-white": "#F6FAFD",
         "tola-orange": "#F28C28",
         body: "hsl(217, 18%, 14%)",
+        head: "hsl(217, 18%, 13%)",
         "tola-green": "hsl(166, 100%, 34%)",
         cyan_dark: "hsla(166, 100%, 34%, 0.4)",
         github: "#EA4C89",
