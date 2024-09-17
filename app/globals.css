@@ -72,3 +72,29 @@
 .typing-container {
   display: inline-block;
 }
+
+.figure-container {
+  background-image: url('/images/tola.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.3s ease-in-out;
+}
+
+.figure-container:hover {
+  background-image: url('/images/tola1.jpg');
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 2s ease-in-out;
+}
