@@ -1,6 +1,9 @@
 import React from "react";
 import Header from "../components/header";
 import ProjectCard from "../components/projectcard";
+import Link from "next/link";
+import SocialButton from "../components/socialbuttons";
+import EmailIcon from "@mui/icons-material/Email";
 
 export default function Projects() {
   return (
@@ -16,7 +19,7 @@ export default function Projects() {
           </p>
         </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mt-10 md:mt-20">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-20 mt-10 md:mt-20">
           {/* Reuse ProjectCard component */}
           <ProjectCard
             imgSrc="/images/skillup.png"
@@ -55,7 +58,30 @@ export default function Projects() {
             githubLink="https://github.com/itstolexy/todo-list-app"
             description="This is a to-do list app built with HTML, CSS, and JavaScript. With this app, you can create, delete, and edit tasks efficiently. Tasks are automatically saved to local storage, so your list is preserved and readily available whenever you return."
           />
-        </div>
+        </section>
+
+        <section className="flex flex-col items-center justify-center text-center mt-10 md:mt-20">
+          <p className="font-bold md:text-2xl text-lg roboto animate-bounce">
+            Contact Me
+          </p>
+          <p className="font-bold md:text-2xl md:max-w-max max-w-[75%] text-sm zilla underline">
+            I would be thrilled to have the opportunity to work with you.
+          </p>
+          <div className="flex flex-row space-x-2 mt-4">
+            <div className="flex flex-row space-x-2 items-center justify-center">
+              <Link href="mailto:odusanyaomotola64@gmail.com" passHref>
+                <SocialButton bgColor="instagram">
+                  <EmailIcon className="w-5 h-5 text-black" />
+                </SocialButton>
+              </Link>
+              <Link href="mailto:odusanyaomotola64@gmail.com">
+                <p className="outfit font-medium text-base mt-1 text-tola-green animate-name">
+                  odusanyaomotola64@gmail.com
+                </p>
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );

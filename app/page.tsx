@@ -73,7 +73,14 @@ export default function Home() {
                 <LinkedInIcon className="w-5 h-5 text-black" />
               </SocialButton>
             </Link>
+
           </div>
+            <Link href="mailto:odusanyaomotola64@gmail.com">
+              <p className="outfit font-medium text-base mt-1 text-tola-green animate-name">
+                odusanyaomotola64@gmail.com
+              </p>
+            </Link>
+
         </div>
         <p className="text-base roboto animate-name">
           I am passionate about transforming designs into fully functional web
