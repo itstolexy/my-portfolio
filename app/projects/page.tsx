@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../components/header";
 import ProjectCard from "../components/projectcard";
 import Link from "next/link";
-import SocialButton from "../components/socialbuttons";
 import EmailIcon from "@mui/icons-material/Email";
 
 export default function Projects() {
