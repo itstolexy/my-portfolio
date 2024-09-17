@@ -66,7 +66,7 @@ export default function About() {
                 key={index}
                 className="animate-fade-in-up transition-transform duration-500 hover:scale-110 flex items-center justify-center w-40 p-2 text-sm border-2 rounded-3xl bg-tola-green border-transparent text-tola-white zilla"
               >
-                <p className="text-lg">{tech}</p>
+                <p className="text-lg zilla">{tech}</p>
               </h1>
             ))}
           </div>

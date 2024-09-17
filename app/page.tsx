@@ -15,7 +15,7 @@ export default function Home() {
       <Header />
       <div className="mx-32 flex flex-col text-tola-white space-y-10 mt-10 pb-16">
         <p className="text-tola-green font-semibold outfit text-xl">
-          Hi there👋, I'm
+          Hi there👋, I&apos;m
         </p>
         <h1 className="items-center font-bold text-6xl roboto typing-effect">
           OMOTOLA{" "}

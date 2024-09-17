@@ -12,7 +12,7 @@ export default function Projects() {
             My <span className="text-tola-green underline">Projects.</span>
           </h1>
           <p className="text-base roboto animate-name mt-10">
-            Here are some of the projects I've worked on in the past.
+            Here are some of the projects I&apos;ve worked on in the past.
           </p>
         </section>
 
@@ -39,14 +39,14 @@ export default function Projects() {
             altText="Another Project"
             liveLink="https://ear1social.vercel.app/"
             githubLink="https://github.com/itstolexy/Ear1social"
-            description={""}
+            description=" Ear1 offers a platform where you can connect with professionals in your field for a small fee, enabling you to build valuable relationships and expand your network. With a focus on fostering genuine connections, Ear1 ensures you have the opportunity to engage with industry experts and enhance your career or business prospects, all while maintaining a straightforward and accessible approach to professional networking."
           />
           <ProjectCard
             imgSrc="/images/portfolio.png"
             altText="Another Project"
             liveLink="https://vira-alpha.vercel.app/"
             githubLink="https://github.com/itstolexy/vira"
-            description={""}
+            description="This portfolio website showcases my skills, projects, and experiences. It is built using modern web technologies to provide a seamless and interactive experience.This portfolio is designed to highlight my work and provide a comprehensive overview of my professional background. It includes sections such as About Me, Projects, and Contact Information."
           />
         </div>
       </div>
