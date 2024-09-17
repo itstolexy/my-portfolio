@@ -6,9 +6,9 @@ export default function Projects() {
   return (
     <div>
       <Header />
-      <div className="text-tola-white mx-32 mt-10 pb-20">
+      <div className="text-tola-white md:mx-32 mx-5 pt-20 md:pt-40">
         <section>
-          <h1 className="items-center font-bold text-6xl roboto typing-effect">
+          <h1 className="items-center font-bold md:text-6xl text-3xl roboto typing-effect">
             My <span className="text-tola-green underline">Projects.</span>
           </h1>
           <p className="text-base roboto animate-name mt-10">
@@ -16,7 +16,7 @@ export default function Projects() {
           </p>
         </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mt-10 md:mt-20">
           {/* Reuse ProjectCard component */}
           <ProjectCard
             imgSrc="/images/skillup.png"
@@ -32,7 +32,7 @@ export default function Projects() {
             altText="Vira Project"
             liveLink="https://vira-alpha.vercel.app/"
             githubLink="https://github.com/itstolexy/vira"
-            description={""}
+            description="Vira is a versatile platform that streamlines the process of hiring equipment for various needs, offering a wide selection of tools and gear with easy search and booking, flexible rental options, secure payments, and real-time availability to ensure you get the equipment you need efficiently and conveniently."
           />
           <ProjectCard
             imgSrc="/images/ear1.png"
@@ -44,9 +44,16 @@ export default function Projects() {
           <ProjectCard
             imgSrc="/images/portfolio.png"
             altText="Another Project"
-            liveLink="https://vira-alpha.vercel.app/"
-            githubLink="https://github.com/itstolexy/vira"
+            liveLink="https://omotolaodusanya.vercel.app"
+            githubLink="https://github.com/itstolexy/my-portfolio"
             description="This portfolio website showcases my skills, projects, and experiences. It is built using modern web technologies to provide a seamless and interactive experience.This portfolio is designed to highlight my work and provide a comprehensive overview of my professional background. It includes sections such as About Me, Projects, and Contact Information."
+          />
+          <ProjectCard
+            imgSrc="/images/todo.png"
+            altText="Another Project"
+            liveLink="https://tolexy-todo-list-app.vercel.app/"
+            githubLink="https://github.com/itstolexy/todo-list-app"
+            description="This is a to-do list app built with HTML, CSS, and JavaScript. With this app, you can create, delete, and edit tasks efficiently. Tasks are automatically saved to local storage, so your list is preserved and readily available whenever you return."
           />
         </div>
       </div>

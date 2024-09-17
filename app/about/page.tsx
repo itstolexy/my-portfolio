@@ -20,14 +20,14 @@ export default function About() {
     "TYPE SCRIPT",
   ]; 
   return (
-    <div className="pb-20">
+    <div className="md:p-20 p-10">
       <Header />
-      <main className="mx-32 text-tola-white mt-10">
-        <h1 className="items-center font-bold text-6xl roboto typing-effect">
+      <main className="md:mx-32 mx-5 text-tola-white mt-10">
+        <h1 className="items-center font-bold md:text-6xl text-3xl roboto typing-effect">
           About <span className="text-tola-green underline">Me.</span>
         </h1>
-        <div className="flex flex-row mt-11 space-x-8">
-          <div className="w-1/2 space-y-6 animate-name outfit text-lg">
+        <div className="flex md:flex-row flex-col md:mt-11 mt-5 md:space-x-16">
+          <div className="md:w-1/2 w-full space-y-6 animate-name outfit text-lg border border-tola-green rounded-3xl p-4">
             <p>
               I am a dedicated Frontend developer with two years of intensive
               learning and more than six months hands-on work experience in
@@ -50,23 +50,23 @@ export default function About() {
               an overview of the key languages and tools I have experience with.
             </p>
           </div>
-          <figure className="h-[35rem] figure-container w-1/2 rounded-3xl p-8 bg-[url('/images/tola.jpg')] bg-cover bg-center" />
+          <figure className="md:h-[40rem] mt-10 md:mt-0 h-[40rem] figure-container md:w-2/5 w-full rounded-3xl md:p-8 bg-[url('/images/tola.jpg')] bg-cover bg-center" />
         </div>
 
         <section className="mt-20">
-          <h1 className="items-center text-center font-bold text-6xl roboto animate-pulse">
+          <h1 className="items-center text-center font-bold md:text-6xl text-2xl roboto animate-pulse">
             <span className="text-tola-green underline">LANGUAGES</span> AND{" "}
             <span className="text-tola-green underline">TOOLS</span>
           </h1>
 
-          <div className="flex flex-wrap mt-10 gap-8 items-center justify-center">
+          <div className="flex flex-wrap mt-10 md:gap-8 gap-2 items-center justify-center">
             {" "}
             {technologies.map((tech, index) => (
               <h1
                 key={index}
-                className="animate-fade-in-up transition-transform duration-500 hover:scale-110 flex items-center justify-center w-40 p-2 text-sm border-2 rounded-3xl bg-tola-green border-transparent text-tola-white zilla"
+                className="animate-fade-in-up transition-transform duration-500 hover:scale-110 flex items-center justify-center md:w-40 w-32 p-2 text-sm border-2 rounded-3xl bg-tola-green border-transparent text-tola-white zilla"
               >
-                <p className="text-lg zilla">{tech}</p>
+                <p className="md:text-lg text-base zilla">{tech}</p>
               </h1>
             ))}
           </div>

@@ -8,53 +8,70 @@ import { Instagram, Twitter } from "@mui/icons-material";
 import SocialButton from "./components/socialbuttons";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import EmailIcon from "@mui/icons-material/Email";
+import Button from "./components/button";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="min-h-screen p-4">
       <Header />
-      <div className="mx-32 flex flex-col text-tola-white space-y-10 mt-10 pb-16">
+      <div className="md:mx-32 mx-5 flex flex-col text-tola-white space-y-10 mt-10 py-10 md:pt-20 lg:pb-16">
         <p className="text-tola-green font-semibold outfit text-xl">
           Hi there👋, I&apos;m
         </p>
-        <h1 className="items-center font-bold text-6xl roboto typing-effect">
-          OMOTOLA{" "}
-          <span className="text-tola-green underline">
-            ODUSANYA.
-          </span>
+        <h1 className="items-center font-bold md:text-6xl text-3xl roboto typing-effect">
+          OMOTOLA <span className="text-tola-green underline">ODUSANYA.</span>
         </h1>
         <h2 className="outfit font-medium text-base text-tola-green animate-name">
           Frontend Developer
         </h2>
+        <div className="space-y-3">
+          <h2
+            className="outfit font-bold text-base text-tola-white animate-name underline"
+            id="contact"
+          >
+            Contact Details
+          </h2>
 
-        <div className="flex items-center gap-4 animate-name">
-          {/* GitHub */}
-          <Link href={"https://github.com/itstolexy"} passHref>
-            <SocialButton bgColor="dribbble">
-              <GitHubIcon className="w-6 h-6 text-black hover:text-white" />
-            </SocialButton>
-          </Link>
+          <div className="flex items-center gap-4 animate-name">
+            {/* GitHub */}
+            <Link href={"https://github.com/itstolexy"} passHref>
+              <SocialButton bgColor="dribbble">
+                <GitHubIcon className="w-6 h-6 text-black hover:text-white" />
+              </SocialButton>
+            </Link>
 
-          {/* Instagram */}
-          <Link href={"https://www.instagram.com/itstolexy"} passHref>
-            <SocialButton bgColor="instagram">
-              <Instagram className="w-5 h-5 text-black" />
-            </SocialButton>
-          </Link>
+            {/* Email */}
+            <Link href="mailto:odusanyaomotola64@gmail.com" passHref>
+              <SocialButton bgColor="instagram">
+                <EmailIcon className="w-5 h-5 text-black" />
+              </SocialButton>
+            </Link>
 
-          {/* Twitter */}
-          <Link href={"https://x.com/itstolexy"} passHref>
-            <SocialButton bgColor="twitter">
-              <Twitter className="w-5 h-5 text-black" />
-            </SocialButton>
-          </Link>
+            {/* Instagram */}
+            <Link href={"https://www.instagram.com/itstolexy"} passHref>
+              <SocialButton bgColor="instagram">
+                <Instagram className="w-5 h-5 text-black" />
+              </SocialButton>
+            </Link>
 
-          {/* LinkedIn */}
-          <Link href={"https://www.linkedin.com/in/omotola-odusanya"} passHref>
-            <SocialButton bgColor="linkedin">
-              <LinkedInIcon className="w-5 h-5 text-black" />
-            </SocialButton>
-          </Link>
+            {/* Twitter */}
+            <Link href={"https://x.com/itstolexy"} passHref>
+              <SocialButton bgColor="twitter">
+                <Twitter className="w-5 h-5 text-black" />
+              </SocialButton>
+            </Link>
+
+            {/* LinkedIn */}
+            <Link
+              href={"https://www.linkedin.com/in/omotola-odusanya"}
+              passHref
+            >
+              <SocialButton bgColor="linkedin">
+                <LinkedInIcon className="w-5 h-5 text-black" />
+              </SocialButton>
+            </Link>
+          </div>
         </div>
         <p className="text-base roboto animate-name">
           I am passionate about transforming designs into fully functional web
@@ -66,24 +83,19 @@ export default function Home() {
           me to continuously learn and adapt to the latest trends in web
           development.
         </p>
-        <div className="flex sm:flex-col lg:flex-row space-x-5">
-          <Link href="/about" download scroll={false}>
-            <h1 className="flex items-center space-x-2 p-2 text-xs border-2 rounded-lg bg-tola-green border-transparent text-tola-white zilla">
-              <p className="text-lg">ABOUT ME</p>
-              <InfoOutlinedIcon fontSize="large" />
-            </h1>
-          </Link>
-          <Link
+        <div className="flex flex-col sm:flex-col md:flex-row md:space-x-5 md:w-auto items-center text-center">
+          <Button
+            href="/about"
+            text="ABOUT ME"
+            icon={<InfoOutlinedIcon fontSize="large" />}
+            download={true}
+          />
+          <Button
             href="https://drive.google.com/file/d/1y1jayHl1CcEsKBdcBQq7EuY2MucCfu7X/view?usp=drivesdk"
-            download
+            text="VIEW RESUME"
+            icon={<DownloadForOfflineOutlinedIcon fontSize="large" />}
             target="_blank"
-            scroll={false}
-          >
-            <h1 className="flex items-center space-x-2 p-2 text-xs border-2 rounded-lg bg-tola-green border-transparent text-tola-white zilla">
-              <p className="text-lg">VIEW RESUME</p>
-              <DownloadForOfflineOutlinedIcon fontSize="large" />
-            </h1>
-          </Link>
+          />
         </div>
       </div>
       <Footer />
