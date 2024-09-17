@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-tola-body md:bg-tola-green text-tola-white px-2 py-4 mx-5 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-tola-body bg-head md:bg-tola-green text-tola-white px-5 md:px-10 py-4 shadow-lg">
       <div className="flex items-center justify-between">
         {/* Logo section */}
         <div className="flex items-center gap-2">
@@ -72,7 +72,7 @@ export default function Header() {
 
         {/* Dropdown menu for small screens */}
         {isMenuOpen && (
-          <ul className="absolute top-full right-0 w-48 bg-tola-green text-tola-white p-4 rounded-lg shadow-lg lg:hidden flex flex-col space-y-4">
+          <ul className="absolute top-full right-0 w-48 bg-tola-green bg text-tola-white p-4 rounded-lg shadow-lg lg:hidden flex flex-col space-y-4">
             <li>
               <Link href="/" onClick={() => setMenuOpen(false)}>
                 Home

@@ -83,7 +83,7 @@ export default function Home() {
           me to continuously learn and adapt to the latest trends in web
           development.
         </p>
-        <div className="flex flex-col sm:flex-col md:flex-row md:space-x-5 md:w-auto items-center text-center">
+        <div className="flex flex-col md:flex-row md:space-x-5 md:w-auto items-left">
           <Button
             href="/about"
             text="ABOUT ME"
