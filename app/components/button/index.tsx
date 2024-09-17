@@ -1,5 +1,4 @@
 import React from "react";
-import { InfoOutlined as InfoOutlinedIcon, DownloadForOfflineOutlined as DownloadForOfflineOutlinedIcon } from "@mui/icons-material";
 import Link from "next/link";
 
 interface ButtonProps {
