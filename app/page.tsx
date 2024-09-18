@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "./components/header";
-import Footer from "./components/footer";
 import DownloadForOfflineOutlinedIcon from "@mui/icons-material/DownloadForOfflineOutlined";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import Link from "next/link";
@@ -107,7 +106,6 @@ export default function Home() {
           />
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

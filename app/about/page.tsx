@@ -18,7 +18,7 @@ export default function About() {
     "MATERIA-UI",
     "REDUX",
     "TYPE SCRIPT",
-  ]; 
+  ];
   return (
     <div className="md:p-20 p-10">
       <Header />
@@ -26,8 +26,9 @@ export default function About() {
         <h1 className="items-center font-bold md:text-6xl text-3xl roboto typing-effect">
           About <span className="text-tola-green underline">Me.</span>
         </h1>
-        <div className="flex md:flex-row flex-col md:mt-11 mt-5 md:space-x-16">
-          <div className="md:w-1/2 w-full space-y-6 animate-name outfit text-lg border border-tola-green rounded-3xl p-4">
+        <div className="flex md:flex-row-reverse flex-col md:mt-11 mt-5">
+          <figure className="md:h-[40rem] mt-10 md:mt-0 h-[40rem] figure-container md:w-2/5 w-full rounded-3xl md:p-8 bg-[url('/images/tola.jpg')] bg-cover bg-center" />
+          <div className="md:w-1/2 w-full space-y-6 animate-name outfit text-lg border border-tola-green rounded-3xl p-4 md:mr-16 md:ml-0 ml-0 mt-5 md:mt-0">
             <p>
               I am a dedicated Frontend developer with two years of intensive
               learning and more than six months hands-on work experience in
@@ -50,7 +51,6 @@ export default function About() {
               an overview of the key languages and tools I have experience with.
             </p>
           </div>
-          <figure className="md:h-[40rem] mt-10 md:mt-0 h-[40rem] figure-container md:w-2/5 w-full rounded-3xl md:p-8 bg-[url('/images/tola.jpg')] bg-cover bg-center" />
         </div>
 
         <section className="mt-20">
