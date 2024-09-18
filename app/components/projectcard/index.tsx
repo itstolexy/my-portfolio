@@ -16,7 +16,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   githubLink,
 }) => {
   return (
-    <div className="flex flex-col p-4 bg-tola-white rounded-2xl transform transition-transform duration-500 hover:-rotate-6 hover:scale-190 animate-name">
+    <div className="flex flex-col p-4 bg-tola-white rounded-2xl perspective">
+    <div className="bend-back">
       <img src={imgSrc} alt={altText} className="rounded-lg shadow-md" />
       <p className="text-base roboto text-black my-2 pt-4 px-4 font-medium">
         {description}
@@ -40,6 +41,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </a>
       </span>
     </div>
+  </div>
+  
   );
 };
 

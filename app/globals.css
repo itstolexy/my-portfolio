@@ -98,3 +98,16 @@
 .animate-fade-in-up {
   animation: fadeInUp 2s ease-in-out;
 }
+
+.perspective {
+  perspective: 1000px;
+}
+
+.bend-back {
+  transform: rotateX(0deg);
+  transition: transform 1s ease;
+}
+
+.bend-back:hover {
+  transform: rotateY(20deg); /* Adjust the degree as needed */
+}
