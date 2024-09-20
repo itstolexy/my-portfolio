@@ -103,11 +103,11 @@
   perspective: 1000px;
 }
 
-.bend-back {
+.bend-left {
   transform: rotateX(0deg);
   transition: transform 1s ease;
 }
 
-.bend-back:hover {
+.bend-left:hover {
   transform: rotateY(20deg); /* Adjust the degree as needed */
 }
