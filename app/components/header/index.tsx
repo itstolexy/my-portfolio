@@ -16,13 +16,15 @@ export default function Header() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-tola-body bg-head md:bg-tola-green text-tola-white px-5 md:px-10 py-4 shadow-lg">
       <div className="flex items-center justify-between">
         {/* Logo section */}
-        <div className="flex items-center gap-2">
-          {/* Blinking circle */}
-          <div className="w-6 h-6 bg-tola-white border animate-bounce" />
-          <span className="lg:text-lg text-sm roboto font-semibold tracking-widest playwrite">
-            O.0
-          </span>
-        </div>
+        <Link href="/">
+          <div className="flex items-center gap-2">
+            {/* Blinking circle */}
+            <div className="w-6 h-6 bg-tola-white border animate-bounce" />
+            <span className="lg:text-lg text-sm roboto font-semibold tracking-widest playwrite">
+              O.0
+            </span>
+          </div>
+        </Link>
 
         {/* Menu icon for small screens */}
         <div className="block lg:hidden" onClick={toggleMenu}>
