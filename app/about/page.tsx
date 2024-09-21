@@ -20,14 +20,26 @@ export default function About() {
     "TYPE SCRIPT",
   ];
   return (
-    <div className="md:p-20 p-10">
+    <div className="md:py-20 py-10">
       <Header />
       <main className="md:mx-32 mx-5 text-tola-white mt-10">
         <h1 className="items-center font-bold md:text-6xl text-3xl roboto typing-effect">
           About <span className="text-tola-green underline">Me.</span>
         </h1>
         <div className="flex md:flex-row-reverse flex-col md:mt-11 mt-5">
-          <figure className="md:h-[40rem] mt-10 md:mt-0 h-[40rem] figure-container md:w-2/5 w-full rounded-3xl md:p-2" />
+          <div className="relative w-1/2 mx-auto md:mx-0 group">
+            <img
+              src="/images/tola.jpg"
+              alt="tola"
+              className="transition-opacity duration-300"
+            />
+            <img
+              src="/images/tola1.jpg"
+              alt="tola1"
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            />
+          </div>
+
           <div className="md:w-1/2 w-full space-y-6 animate-name outfit text-lg border border-tola-green rounded-3xl p-4 md:mr-16 md:ml-0 ml-0 mt-7 md:mt-0">
             <p>
               I am a dedicated Frontend developer with two years of intensive

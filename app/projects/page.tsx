@@ -21,6 +21,13 @@ export default function Projects() {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-20 mt-10 md:mt-20">
           {/* Reuse ProjectCard component */}
           <ProjectCard
+            imgSrc="/images/vira.png"
+            altText="Vira Project"
+            liveLink="https://vira-alpha.vercel.app/"
+            githubLink="https://github.com/itstolexy/vira"
+            description="Vira is a versatile platform that streamlines the process of hiring equipment for various needs, offering a wide selection of tools and gear with easy search and booking, flexible rental options, secure payments, and real-time availability to ensure you get the equipment you need efficiently and conveniently."
+          />
+          <ProjectCard
             imgSrc="/images/skillup.png"
             altText="SkillUp Project"
             liveLink="https://skill-up-mu.vercel.app"
@@ -28,13 +35,6 @@ export default function Projects() {
             description={
               "An edutech platform where prospective learners have access to numerous tech course ranging from design to development to data analytics etc. Learners also gets opportunity of meeting and interacting with seasoned tutors and industry experts. They also have access to a community of learners and tech enthusiast."
             }
-          />
-          <ProjectCard
-            imgSrc="/images/vira.png"
-            altText="Vira Project"
-            liveLink="https://vira-alpha.vercel.app/"
-            githubLink="https://github.com/itstolexy/vira"
-            description="Vira is a versatile platform that streamlines the process of hiring equipment for various needs, offering a wide selection of tools and gear with easy search and booking, flexible rental options, secure payments, and real-time availability to ensure you get the equipment you need efficiently and conveniently."
           />
           <ProjectCard
             imgSrc="/images/ear1.png"
@@ -56,6 +56,13 @@ export default function Projects() {
             liveLink="https://tolexy-todo-list-app.vercel.app/"
             githubLink="https://github.com/itstolexy/todo-list-app"
             description="This is a to-do list app built with HTML, CSS, and JavaScript. With this app, you can create, delete, and edit tasks efficiently. Tasks are automatically saved to local storage, so your list is preserved and readily available whenever you return."
+          />
+          <ProjectCard
+            imgSrc="/images/raffle.png"
+            altText="Another Project"
+            liveLink="https://tolexy-raffledraw.vercel.app/"
+            githubLink="https://github.com/itstolexy/Raffledraw"
+            description="The Raffle Draw website is a user-friendly platform built with React, Next.js, Tailwind CSS, TypeScript, and Axios, allowing participants to enter a raffle, where a random winner is selected at an event and has one minute to claim their prize before a new winner is chosen, and it's hosted on Vercel."
           />
         </section>
 
