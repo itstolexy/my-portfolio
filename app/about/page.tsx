@@ -16,7 +16,7 @@ export default function About() {
     "AZURE",
     "MATERIA-UI",
     "REDUX",
-    "TYPE SCRIPT",
+    "TYPESCRIPT",
   ];
   return (
     <div className="md:py-20 py-10">

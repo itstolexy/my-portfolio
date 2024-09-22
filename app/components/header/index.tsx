@@ -59,7 +59,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="https://drive.google.com/file/d/1OZ2_iI02pyCzrJMdRbj_XPiyLZPV5h8i/view?usp=drivesdk"
+              href="/docs/Omotola_Odusanya-CV.pdf"
               download
               scroll={false}
               target="_blank"
@@ -97,7 +97,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="https://drive.google.com/file/d/1OZ2_iI02pyCzrJMdRbj_XPiyLZPV5h8i/view?usp=drivesdk"
+                href="/docs/Omotola_Odusanya-CV.pdf"
                 download
                 target="_blank"
                 onClick={() => setMenuOpen(false)}
