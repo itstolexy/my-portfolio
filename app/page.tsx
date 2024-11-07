@@ -36,28 +36,36 @@ export default function Home() {
 
           <div className="flex items-center gap-4 animate-name">
             {/* GitHub */}
-            <Link href={"https://github.com/itstolexy"} passHref>
+            <Link href="https://github.com/itstolexy" target="_blank" passHref>
               <SocialButton bgColor="dribbble">
                 <GitHubIcon className="w-6 h-6 text-black hover:text-white" />
               </SocialButton>
             </Link>
 
             {/* Email */}
-            <Link href="mailto:odusanyaomotola64@gmail.com" passHref>
+            <Link
+              href="mailto:odusanyaomotola64@gmail.com"
+              target="_blank"
+              passHref
+            >
               <SocialButton bgColor="instagram">
                 <EmailIcon className="w-5 h-5 text-black" />
               </SocialButton>
             </Link>
 
             {/* Instagram */}
-            <Link href={"https://www.instagram.com/itstolexy"} passHref>
+            <Link
+              href="https://www.instagram.com/itstolexy"
+              target="_blank"
+              passHref
+            >
               <SocialButton bgColor="instagram">
                 <Instagram className="w-5 h-5 text-black" />
               </SocialButton>
             </Link>
 
             {/* Twitter */}
-            <Link href={"https://x.com/itstolexy"} passHref>
+            <Link href="https://x.com/itstolexy" target="_blank" passHref>
               <SocialButton bgColor="twitter">
                 <Twitter className="w-5 h-5 text-black" />
               </SocialButton>
@@ -65,21 +73,20 @@ export default function Home() {
 
             {/* LinkedIn */}
             <Link
-              href={"https://www.linkedin.com/in/omotola-odusanya"}
+              href="https://www.linkedin.com/in/omotola-odusanya"
+              target="_blank"
               passHref
             >
               <SocialButton bgColor="linkedin">
                 <LinkedInIcon className="w-5 h-5 text-black" />
               </SocialButton>
             </Link>
-
           </div>
-            <Link href="mailto:odusanyaomotola64@gmail.com">
-              <p className="outfit font-medium text-base mt-1 text-tola-green animate-name">
-                odusanyaomotola64@gmail.com
-              </p>
-            </Link>
-
+          <Link href="mailto:odusanyaomotola64@gmail.com" target="_blank">
+            <p className="outfit font-medium text-base mt-1 text-tola-green animate-name">
+              odusanyaomotola64@gmail.com
+            </p>
+          </Link>
         </div>
         <p className="text-base roboto animate-name">
           I am passionate about transforming designs into fully functional web
