@@ -16,6 +16,7 @@ export default function About() {
     "AZURE",
     "MATERIA-UI",
     "REDUX",
+    "REDUX TOOLKIT",
     "TYPESCRIPT",
   ];
   return (
