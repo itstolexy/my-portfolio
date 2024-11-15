@@ -106,7 +106,7 @@ export default function Home() {
             download={true}
           />
           <Button
-            href="https://drive.google.com/file/d/1MXTgboycW2x0l7zMSi3ZOvXrmucw-1Qo/view?usp=sharing"
+            href="https://drive.google.com/file/d/1tX-1y894XdIfiLEUxxtrJs-eKi1x4nar/view?usp=drivesdk"
             text="VIEW RESUME"
             icon={<DownloadForOfflineOutlinedIcon fontSize="large" />}
             target="_blank"
