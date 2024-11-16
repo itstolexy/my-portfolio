@@ -40,8 +40,8 @@ export default function Header() {
             <span className="absolute inset-x-0 bottom-0 h-0.5 bg-tola-green transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </li>
           <li className="relative group">
-            <Link href="/#contact">
-              <p className="font-medium">Contact Me</p>
+            <Link href="/about" scroll={false}>
+              <p>About</p>
             </Link>
             <span className="absolute inset-x-0 bottom-0 h-0.5 bg-tola-green transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </li>
@@ -52,8 +52,8 @@ export default function Header() {
             <span className="absolute inset-x-0 bottom-0 h-0.5 bg-tola-green transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </li>
           <li className="relative group">
-            <Link href="/about" scroll={false}>
-              <p>About</p>
+            <Link href="/#contact">
+              <p className="font-medium">Contact Me</p>
             </Link>
             <span className="absolute inset-x-0 bottom-0 h-0.5 bg-tola-green transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </li>
@@ -81,8 +81,8 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/#contact" onClick={() => setMenuOpen(false)}>
-                Contact Me
+              <Link href="/about" onClick={() => setMenuOpen(false)}>
+                About
               </Link>
             </li>
             <li>
@@ -91,8 +91,8 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/about" onClick={() => setMenuOpen(false)}>
-                About
+              <Link href="/#contact" onClick={() => setMenuOpen(false)}>
+                Contact Me
               </Link>
             </li>
             <li>
