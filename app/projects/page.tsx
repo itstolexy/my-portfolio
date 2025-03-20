@@ -28,6 +28,13 @@ export default function Projects() {
             description="Vira is a versatile platform that streamlines the process of hiring equipment for various needs, offering a wide selection of tools and gear with easy search and booking, flexible rental options, secure payments, and real-time availability to ensure you get the equipment you need efficiently and conveniently."
           />
           <ProjectCard
+            imgSrc="/images/glass.png"
+            altText="Glass-House Project"
+            liveLink="https://glass-house-kappa.vercel.app/"
+            githubLink="https://github.com/itstolexy/glass-house"
+            description="The Glass House Lagos is a sophisticated mid-scale restaurant and lounge designed to redefine dining and social experiences in Lagos.It embodies elegance, innovation, and vibrant energy, offering a seamless blend of upscale cuisine, exceptional service, and a stylish and alluring ambiance.With our modern architecture and warm, inviting atmosphere, The Glass House serves as a haven for food lovers, trendsetters, and socialites alike."
+          />
+          <ProjectCard
             imgSrc="/images/skillup.png"
             altText="SkillUp Project"
             liveLink="https://skill-up-mu.vercel.app"
@@ -37,18 +44,18 @@ export default function Projects() {
             }
           />
           <ProjectCard
-            imgSrc="/images/ear1.png"
-            altText="Another Project"
-            liveLink="https://ear1social.vercel.app/"
-            githubLink="https://github.com/itstolexy/Ear1social"
-            description=" Ear1 offers a platform where you can connect with professionals in your field for a small fee, enabling you to build valuable relationships and expand your network. With a focus on fostering genuine connections, Ear1 ensures you have the opportunity to engage with industry experts and enhance your career or business prospects, all while maintaining a straightforward and accessible approach to professional networking."
-          />
-          <ProjectCard
             imgSrc="/images/portfolio.png"
             altText="Another Project"
             liveLink="https://omotolaodusanya.vercel.app"
             githubLink="https://github.com/itstolexy/my-portfolio"
             description="This portfolio website showcases my skills, projects, and experiences. It is built using modern web technologies to provide a seamless and interactive experience.This portfolio is designed to highlight my work and provide a comprehensive overview of my professional background. It includes sections such as About Me, Projects, and Contact Information."
+          />
+          <ProjectCard
+            imgSrc="/images/ear1.png"
+            altText="Another Project"
+            liveLink="https://ear1social.vercel.app/"
+            githubLink="https://github.com/itstolexy/Ear1social"
+            description=" Ear1 offers a platform where you can connect with professionals in your field for a small fee, enabling you to build valuable relationships and expand your network. With a focus on fostering genuine connections, Ear1 ensures you have the opportunity to engage with industry experts and enhance your career or business prospects, all while maintaining a straightforward and accessible approach to professional networking."
           />
           <ProjectCard
             imgSrc="/images/todo.png"
