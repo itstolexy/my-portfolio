@@ -1,24 +1,56 @@
-import React from "react";
-import Header from "../components/header";
-import ProjectCard from "../components/projectcard";
+"use client";
+
+import React, { useRef } from "react";
+import ProjectCard from "../projectcard";
 import Link from "next/link";
 import EmailIcon from "@mui/icons-material/Email";
+import { useIntersectionObserver } from "@/app/intersection";
 
 export default function Projects() {
+  const titleRef = useRef(null);
+  const descriptionRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const isTitleVisible = useIntersectionObserver(titleRef, { threshold: 0.1 });
+  const isDescriptionVisible = useIntersectionObserver(descriptionRef, {
+    threshold: 0.1,
+  });
+  const areProjectsVisible = useIntersectionObserver(projectsRef, {
+    threshold: 0.1,
+  });
+  const isContactVisible = useIntersectionObserver(contactRef, {
+    threshold: 0.1,
+  });
+
   return (
-    <div>
-      <Header />
-      <div className="text-tola-white md:mx-32 mx-10 py-20 md:py-40">
+    <div className="pt-10">
+      <div className="text-tola-white md:mx-32 mx-5 py-10 md:py-20">
         <section>
-          <h1 className="items-center font-bold md:text-6xl text-3xl roboto typing-effect">
+          <h1
+            ref={titleRef}
+            className={`items-center font-bold md:text-6xl text-3xl roboto transition-opacity duration-500 ${
+              isTitleVisible ? "typing-effect" : "opacity-0"
+            }`}
+          >
             My <span className="text-tola-green underline">Projects.</span>
           </h1>
-          <p className="text-base roboto animate-name mt-10">
+          <p
+            ref={descriptionRef}
+            className={`text-base roboto mt-10 transition-opacity duration-500 ${
+              isDescriptionVisible ? "opacity-100" : "opacity-0"
+            }`}
+          >
             Here are some of the projects I&apos;ve worked on in the past.
           </p>
         </section>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-20 mt-10 md:mt-20">
+        <section
+          ref={projectsRef}
+          className={`grid grid-cols-1 md:grid-cols-2 gap-20 mt-10 md:mt-20 transition-opacity duration-300 ${
+            areProjectsVisible ? "opacity-100" : "opacity-0"
+          }`}
+        >
           {/* Reuse ProjectCard component */}
           <ProjectCard
             imgSrc="/images/vira.png"
@@ -73,15 +105,22 @@ export default function Projects() {
           />
         </section>
 
-        <section className="flex flex-col items-center justify-center text-center mt-10 md:mt-20">
-          <p className="font-bold md:text-2xl text-lg roboto animate-bounce">
-            Contact Me
-          </p>
+        <section
+          ref={contactRef}
+          className={`flex flex-col items-center justify-center text-center mt-10 md:mt-20 transition-opacity duration-700 ${
+            isContactVisible ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <p className="font-bold md:text-2xl text-lg roboto">Contact Me</p>
           <p className="font-bold md:text-2xl md:max-w-max max-w-[75%] text-sm zilla underline">
             I would be thrilled to work with you.
           </p>
           <div className="flex flex-row space-x-2 mt-4">
-            <div className="flex flex-row space-x-1 items-center border border-tola-green p-2 justify-center animate-name">
+            <div
+              className={`flex flex-row space-x-1 items-center border border-tola-green p-2 justify-center ${
+                isContactVisible ? "animate-bounce" : ""
+              }`}
+            >
               <EmailIcon className="text-tola-white" />
               <Link href="mailto:odusanyaomotola64@gmail.com">
                 <p className="outfit font-medium text-base text-tola-green">

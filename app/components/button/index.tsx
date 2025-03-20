@@ -9,7 +9,13 @@ interface ButtonProps {
   target?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ href, text, icon, download = false, target = "_self" }) => {
+const Button: React.FC<ButtonProps> = ({
+  href,
+  text,
+  icon,
+  download = false,
+  target = "_self",
+}) => {
   return (
     <Link href={href} download={download} target={target} scroll={false}>
       <h1 className="flex items-center mb-4 md:mb-0 w-56 text-center justify-center space-x-2 p-2 text-xs border-2 rounded-lg bg-tola-green border-transparent text-tola-white zilla">

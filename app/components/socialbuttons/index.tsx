@@ -5,7 +5,7 @@ interface Props {
   bgColor?: string | undefined;
 }
 
-const SocialButton: React.FC<Props> = ({children, bgColor = "black" }) => {
+const SocialButton: React.FC<Props> = ({ children, bgColor = "black" }) => {
   let bgHoverColorClass;
 
   switch (bgColor) {
@@ -25,7 +25,6 @@ const SocialButton: React.FC<Props> = ({children, bgColor = "black" }) => {
       bgHoverColorClass = "hover:bg-black";
       break;
   }
-  
 
   return (
     <button

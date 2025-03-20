@@ -1,4 +1,3 @@
-
 My Portfolio
 
 Welcome to my personal portfolio repository. This portfolio showcases my skills, projects, and experiences. It is built using modern web technologies to provide a seamless and interactive experience.
