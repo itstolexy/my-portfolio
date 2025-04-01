@@ -21,6 +21,7 @@ export default function About() {
     "HTML 5",
     "CSS 3",
     "JAVASCRIPT",
+    "TYPESCRIPT",
     "REACT JS",
     "NEXT.JS",
     "TAILWIND CSS",
@@ -32,7 +33,7 @@ export default function About() {
     "MATERIA-UI",
     "REDUX",
     "REDUX TKT",
-    "TYPESCRIPT",
+    "REACT QUERY",
   ];
 
   return (
