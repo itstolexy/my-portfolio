@@ -78,7 +78,7 @@ export default function About() {
               learning and over a year hands-on work experience in software
               development industry. I excel at creating responsive and
               user-friendly web interfaces. I am enthusiastic about leveraging
-              technology to simplify life and I&apos;m trilled to develop
+              technology to simplify life and I&apos;m thrilled to develop
               applications with intuitive interface globally.
             </p>
             <p>
