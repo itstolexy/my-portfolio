@@ -11,15 +11,12 @@ export default function Header() {
   const menuRef = useRef<HTMLDivElement>(null);
   const menuIconRef = useRef<HTMLDivElement>(null);
 
-  // Modified toggle approach for more reliable behavior
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
   };
 
-  // Close the menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      // If click is outside menu AND not on the menu icon
       if (
         menuRef.current &&
         !menuRef.current.contains(event.target as Node) &&
@@ -30,13 +27,20 @@ export default function Header() {
       }
     };
 
-    // Add event listener
     document.addEventListener("mousedown", handleClickOutside);
-
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  // Smooth scroll handler for anchor links
+  const handleAnchorClick = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-tola-body bg-head bg-tola-green text-tola-white px-5 md:px-10 py-4 shadow-lg">
@@ -44,7 +48,6 @@ export default function Header() {
         {/* Logo section */}
         <Link href="/">
           <div className="flex items-center gap-2">
-            {/* Blinking circle */}
             <div className="w-6 h-6 bg-tola-white border animate-bounce" />
             <span className="lg:text-lg text-sm roboto font-semibold tracking-widest playwrite animate-bounce">
               O.0
@@ -61,29 +64,35 @@ export default function Header() {
           {isMenuOpen ? <CloseIcon /> : <MenuOutlinedIcon />}
         </div>
 
-        {/* Navigation menu for large screens */}
+        {/* Navigation menu for large screens - Fixed */}
         <ul className="zilla hidden lg:flex lg:flex-row lg:gap-12 text-lg items-center">
           <li className="relative group">
-            <Link href="/">
-              <p className="font-medium">Home</p>
+            <Link href="/" className="font-medium">
+              Home
             </Link>
             <span className="absolute inset-x-0 bottom-0 h-0.5 bg-tola-green transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </li>
           <li className="relative group">
-            <Link href="#about" scroll={false}>
-              <p>About</p>
+            <Link href="#about" onClick={(e) => handleAnchorClick(e, "about")}>
+              About
             </Link>
             <span className="absolute inset-x-0 bottom-0 h-0.5 bg-tola-green transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </li>
           <li className="relative group">
-            <Link href="#projects" scroll={false}>
-              <p>Projects</p>
+            <Link
+              href="#projects"
+              onClick={(e) => handleAnchorClick(e, "projects")}
+            >
+              Projects
             </Link>
             <span className="absolute inset-x-0 bottom-0 h-0.5 bg-tola-green transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </li>
           <li className="relative group">
-            <Link href="#hero">
-              <p className="font-medium">Contact Me</p>
+            <Link
+              href="#contact"
+              onClick={(e) => handleAnchorClick(e, "contact")}
+            >
+              <span className="font-medium">Contact Me</span>
             </Link>
             <span className="absolute inset-x-0 bottom-0 h-0.5 bg-tola-green transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </li>
@@ -91,13 +100,11 @@ export default function Header() {
             <Link
               href="/docs/Omotola_Odusanya-CV.pdf"
               download
-              scroll={false}
               target="_blank"
+              className="flex items-center space-x-2 p-2 border-2 rounded-lg bg-tola-white text-tola-green roboto animate-blink hover:animate-none"
             >
-              <h1 className="flex items-center space-x-2 p-2 border-2 rounded-lg bg-tola-white text-tola-green roboto animate-blink hover:animate-none">
-                <p className="text-lg">RESUME</p>
-                <DownloadForOfflineOutlinedIcon fontSize="large" />
-              </h1>
+              <span className="text-lg">RESUME</span>
+              <DownloadForOfflineOutlinedIcon fontSize="large" />
             </Link>
           </li>
         </ul>
@@ -118,17 +125,35 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="#about" onClick={() => setMenuOpen(false)}>
+              <Link
+                href="#about"
+                onClick={(e) => {
+                  handleAnchorClick(e, "about");
+                  setMenuOpen(false);
+                }}
+              >
                 About
               </Link>
             </li>
             <li>
-              <Link href="#projects" onClick={() => setMenuOpen(false)}>
+              <Link
+                href="#projects"
+                onClick={(e) => {
+                  handleAnchorClick(e, "projects");
+                  setMenuOpen(false);
+                }}
+              >
                 Projects
               </Link>
             </li>
             <li>
-              <Link href="#hero" onClick={() => setMenuOpen(false)}>
+              <Link
+                href="#contact"
+                onClick={(e) => {
+                  handleAnchorClick(e, "contact");
+                  setMenuOpen(false);
+                }}
+              >
                 Contact Me
               </Link>
             </li>
