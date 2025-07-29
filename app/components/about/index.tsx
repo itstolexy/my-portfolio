@@ -30,10 +30,16 @@ export default function About() {
     "BOOTSTRAP",
     "FIGMA",
     "AZURE",
-    "MATERIA-UI",
+    "MATERIAL-UI",
     "REDUX",
     "REDUX TKT",
     "REACT QUERY",
+    "REST API",
+    "SWR",
+    "JEST",
+    "ZUSTAND",
+    "FRAMER MOTION",
+    "AXIOS",
   ];
 
   return (
@@ -109,7 +115,7 @@ export default function About() {
             {technologies.map((tech, index) => (
               <h1
                 key={index}
-                className={`transition-transform duration-500 hover:scale-110 flex items-center justify-center md:w-40 w-32 p-2 text-sm border-2 rounded-3xl bg-tola-green border-transparent text-tola-white zilla ${
+                className={`transition-transform duration-500 hover:scale-110 flex items-center justify-center min-md:w-40 w-fit min-w-32 p-2 text-sm border-2 rounded-3xl bg-tola-green border-transparent text-tola-white zilla ${
                   isTechVisible ? `animate-fade-in-up delay-${index * 100}` : ""
                 }`}
                 style={{ animationDelay: `${index * 0.3}s` }}
