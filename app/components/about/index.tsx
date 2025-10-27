@@ -32,7 +32,7 @@ export default function About() {
     "AZURE",
     "MATERIAL-UI",
     "REDUX",
-    "REDUX TKT",
+    "REDUX TOOLKIT",
     "REACT QUERY",
     "REST API",
     "SWR",
@@ -40,6 +40,15 @@ export default function About() {
     "ZUSTAND",
     "FRAMER MOTION",
     "AXIOS",
+    "SASS/SCSS",
+    "WEBPACK",
+    "VERCEL",
+    "REACT TESTING LIBRARY",
+    "CYPRESS",
+    "ESLINT",
+    "PRETTIER",
+    "POSTMAN",
+    "VS CODE",
   ];
 
   return (
@@ -74,12 +83,12 @@ export default function About() {
 
           <div className="md:w-1/2 w-full space-y-6 outfit text-lg border border-tola-green rounded-3xl p-4 md:mr-16 md:ml-0 ml-0 mt-7 md:mt-0">
             <p>
-              I am a dedicated Frontend developer with two years of intensive
-              learning and over a year hands-on work experience in software
-              development industry. I excel at creating responsive and
-              user-friendly web interfaces. I am enthusiastic about leveraging
-              technology to simplify life and I&apos;m thrilled to develop
-              applications with intuitive interface globally.
+              I am a dedicated Frontend developer with two years of hands-on
+              work experience in software development industry. I excel at
+              creating responsive and user-friendly web interfaces. I am
+              enthusiastic about leveraging technology to simplify life and
+              I&apos;m thrilled to develop applications with intuitive interface
+              globally.
             </p>
             <p>
               I am committed to continuous learning and staying updated with the
