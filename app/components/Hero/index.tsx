@@ -150,14 +150,16 @@ const Hero = () => {
           isDescriptionVisible ? "opacity-100" : "opacity-0"
         }`}
       >
-        I am passionate about transforming designs into fully functional web
-        applications with exceptional user interfaces and seamless experiences.
-        I focus on creating visually appealing, responsive layouts that provide
-        intuitive navigation and smooth interactions, ensuring users enjoy a
-        high-quality experience. My commitment to building modern, accessible,
-        and high-performance applications drives me to continuously learn and
-        adapt to the latest trends in web development.
+        I am a frontend developer passionate about turning designs into fully
+        functional web and mobile applications with clean, user-friendly
+        interfaces. I focus on building responsive, visually appealing layouts
+        that provide intuitive navigation and smooth interactions, ensuring a
+        high-quality user experience.
+        <br />I am committed to creating modern, accessible, and performant
+        applications, and I continuously learn and adopt the latest trends and
+        best practices in web and mobile development.
       </p>
+
       <div
         ref={buttonsRef}
         className={`flex flex-col md:flex-row md:space-x-5 md:w-auto items-left transition-opacity duration-700 ${

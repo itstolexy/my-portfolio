@@ -18,37 +18,50 @@ export default function About() {
   });
 
   const technologies = [
-    "HTML 5",
-    "CSS 3",
-    "JAVASCRIPT",
-    "TYPESCRIPT",
-    "REACT JS",
-    "NEXT.JS",
-    "TAILWIND CSS",
-    "GIT",
-    "GITHUB",
-    "BOOTSTRAP",
-    "FIGMA",
-    "AZURE",
-    "MATERIAL-UI",
-    "REDUX",
-    "REDUX TOOLKIT",
-    "REACT QUERY",
-    "REST API",
-    "SWR",
-    "JEST",
-    "ZUSTAND",
-    "FRAMER MOTION",
-    "AXIOS",
+    // Core Web
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "TypeScript",
     "SASS/SCSS",
-    "WEBPACK",
-    "VERCEL",
-    "REACT TESTING LIBRARY",
-    "CYPRESS",
-    "ESLINT",
-    "PRETTIER",
-    "POSTMAN",
-    "VS CODE",
+
+    // Frameworks & Libraries
+    "React.js",
+    "Next.js",
+    "React Native",
+    "Expo",
+    "Tailwind CSS",
+    "Bootstrap",
+    "Material-UI",
+    "Framer Motion",
+    "Redux",
+    "Redux Toolkit",
+    "React Query",
+    "Zustand",
+
+    // API & HTTP
+    "REST API",
+    "Axios",
+    "SWR",
+    "Postman",
+
+    // Testing
+    "Jest",
+    "React Testing Library",
+    "Cypress",
+
+    // Tooling & Version Control
+    "Git",
+    "GitHub",
+    "Webpack",
+    "ESLint",
+    "Prettier",
+    "VS Code",
+    "Vercel",
+    "Azure",
+
+    // Design
+    "Figma",
   ];
 
   return (
@@ -83,25 +96,28 @@ export default function About() {
 
           <div className="md:w-1/2 w-full space-y-6 outfit text-lg border border-tola-green rounded-3xl p-4 md:mr-16 md:ml-0 ml-0 mt-7 md:mt-0">
             <p>
-              I am a dedicated Frontend developer with two years of hands-on
-              work experience in software development industry. I excel at
-              creating responsive and user-friendly web interfaces. I am
-              enthusiastic about leveraging technology to simplify life and
-              I&apos;m thrilled to develop applications with intuitive interface
-              globally.
+              I am a dedicated Frontend Developer with over two years of
+              hands-on experience in the software development industry. I
+              specialize in creating responsive, user-friendly, and visually
+              appealing web interfaces. I am passionate about leveraging
+              technology to simplify life and delivering applications with
+              intuitive, seamless experiences to users globally.
             </p>
+
             <p>
-              I am committed to continuous learning and staying updated with the
-              latest industry trends and technologies to enhance user experience
-              and drive project success. I am not limited to a language, I am
-              willing to learn and utilize the tool required to build great
-              applications for you.
+              I am committed to continuous learning and staying up-to-date with
+              the latest trends and technologies in frontend and mobile
+              development. I adapt quickly to new tools and frameworks, ensuring
+              that every project I work on is built using the best possible
+              technologies to meet its goals.
             </p>
+
             <p>
-              In my journey as a frontend developer, I have had the opportunity
-              to work with a diverse set of languages and tools that have
-              significantly contributed to the success of my projects. Below is
-              an overview of the key languages and tools I have experience with.
+              Throughout my journey as a frontend developer, I have gained
+              experience with a diverse set of languages and tools, enabling me
+              to deliver high-quality, scalable, and maintainable applications.
+              Below is an overview of the key languages and tools I have worked
+              with.
             </p>
           </div>
         </div>
