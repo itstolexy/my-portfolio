@@ -31,6 +31,7 @@ export default function About() {
     "React Native",
     "Expo",
     "Tailwind CSS",
+    "NativeWind",
     "Bootstrap",
     "Material-UI",
     "Framer Motion",
