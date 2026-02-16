@@ -6,19 +6,19 @@ import Hero from "./components/Hero";
 
 export default function Home() {
   return (
-    <div className="min-h-screen p-4">
+    <main className="min-h-screen p-4">
       <Header />
-      <div id="hero">
+      <section id="hero" aria-label="Hero">
         <Hero />
-      </div>
+      </section>
 
-      <div id="about">
+      <section id="about" aria-label="About">
         <About />
-      </div>
+      </section>
 
-      <div id="projects">
+      <section id="projects" aria-label="Projects">
         <Projects />
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }

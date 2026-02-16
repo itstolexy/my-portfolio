@@ -1,34 +1,30 @@
 import React, { ReactNode } from "react";
 
+type SocialButtonColor =
+  | "github"
+  | "instagram"
+  | "twitter"
+  | "linkedin"
+  | "email";
+
 interface Props {
   children: ReactNode;
-  bgColor?: string | undefined;
+  bgColor?: SocialButtonColor;
 }
 
-const SocialButton: React.FC<Props> = ({ children, bgColor = "black" }) => {
-  let bgHoverColorClass;
-
-  switch (bgColor) {
-    case "github":
-      bgHoverColorClass = "hover:bg-github";
-      break;
-    case "instagram":
-      bgHoverColorClass = "hover:bg-instagram";
-      break;
-    case "twitter":
-      bgHoverColorClass = "hover:bg-twitter";
-      break;
-    case "linkedin":
-      bgHoverColorClass = "hover:bg-linkedin";
-      break;
-    default:
-      bgHoverColorClass = "hover:bg-black";
-      break;
-  }
+const SocialButton: React.FC<Props> = ({ children, bgColor = "github" }) => {
+  const bgHoverColorClass: Record<SocialButtonColor, string> = {
+    github: "hover:bg-github",
+    instagram: "hover:bg-instagram",
+    twitter: "hover:bg-twitter",
+    linkedin: "hover:bg-linkedin",
+    email: "hover:bg-instagram",
+  };
 
   return (
     <button
-      className={`group h-8 w-8 p-2 bg-white ${bgHoverColorClass} rounded-full transition-colors duration-200 ease-in-out flex justify-center items-center`}
+      type="button"
+      className={`group h-8 w-8 p-2 bg-white ${bgHoverColorClass[bgColor]} rounded-full transition-colors duration-200 ease-in-out flex justify-center items-center`}
     >
       <div className="fill-black group-hover:fill-white transition-colors duration-200 ease-in-out">
         {children}

@@ -13,14 +13,14 @@ import DownloadForOfflineOutlinedIcon from "@mui/icons-material/DownloadForOffli
 import { useIntersectionObserver } from "@/app/intersection";
 
 const Hero = () => {
-  const greetingRef = useRef(null);
-  const nameRef = useRef(null);
-  const titleRef = useRef(null);
-  const contactRef = useRef(null);
-  const socialsRef = useRef(null);
-  const emailRef = useRef(null);
-  const descriptionRef = useRef(null);
-  const buttonsRef = useRef(null);
+  const greetingRef = useRef<HTMLParagraphElement | null>(null);
+  const nameRef = useRef<HTMLHeadingElement | null>(null);
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
+  const contactRef = useRef<HTMLHeadingElement | null>(null);
+  const socialsRef = useRef<HTMLDivElement | null>(null);
+  const emailRef = useRef<HTMLParagraphElement | null>(null);
+  const descriptionRef = useRef<HTMLParagraphElement | null>(null);
+  const buttonsRef = useRef<HTMLDivElement | null>(null);
 
   const isGreetingVisible = useIntersectionObserver(greetingRef, {
     threshold: 0.1,
@@ -41,6 +41,44 @@ const Hero = () => {
     threshold: 0.1,
   });
 
+  const socialLinks = [
+    {
+      name: "GitHub",
+      href: "https://github.com/itstolexy",
+      bgColor: "github",
+      ariaLabel: "Visit GitHub profile",
+      icon: <GitHubIcon className="w-6 h-6 text-black hover:text-white" />,
+    },
+    {
+      name: "Email",
+      href: "mailto:odusanyaomotola64@gmail.com",
+      bgColor: "email",
+      ariaLabel: "Send an email",
+      icon: <EmailIcon className="w-5 h-5 text-black" />,
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/itstolexy",
+      bgColor: "instagram",
+      ariaLabel: "Visit Instagram profile",
+      icon: <Instagram className="w-5 h-5 text-black" />,
+    },
+    {
+      name: "Twitter",
+      href: "https://x.com/itstolexy",
+      bgColor: "twitter",
+      ariaLabel: "Visit X profile",
+      icon: <Twitter className="w-5 h-5 text-black" />,
+    },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/omotola-odusanya",
+      bgColor: "linkedin",
+      ariaLabel: "Visit LinkedIn profile",
+      icon: <LinkedInIcon className="w-5 h-5 text-black" />,
+    },
+  ] as const;
+
   return (
     <div className="md:mx-32 mx-5 flex flex-col text-tola-white space-y-10 mt-10 py-10 md:pt-20 md:pb-20 pb-10">
       <p
@@ -48,7 +86,6 @@ const Hero = () => {
         className={`text-tola-green font-semibold outfit text-xl transition-opacity duration-700 ${
           isGreetingVisible ? "opacity-100" : "opacity-0"
         }`}
-        id="contact"
       >
         Hi there👋, I&apos;m
       </p>
@@ -67,12 +104,13 @@ const Hero = () => {
             isTitleVisible ? "opacity-100" : "opacity-0"
           }`}
         >
-          Frontend Developer
+          Frontend & Mobile Developer
         </h2>
       </div>
       <div className="space-y-3">
         <h2
           ref={contactRef}
+          id="contact"
           className={`outfit font-bold text-base text-tola-white underline transition-opacity duration-700 ${
             isContactVisible ? "opacity-100" : "opacity-0"
           }`}
@@ -86,54 +124,24 @@ const Hero = () => {
             areSocialsVisible ? "opacity-100" : "opacity-0"
           }`}
         >
-          {/* GitHub */}
-          <Link href="https://github.com/itstolexy" target="_blank" passHref>
-            <SocialButton bgColor="dribbble">
-              <GitHubIcon className="w-6 h-6 text-black hover:text-white" />
-            </SocialButton>
-          </Link>
-
-          {/* Email */}
-          <Link
-            href="mailto:odusanyaomotola64@gmail.com"
-            target="_blank"
-            passHref
-          >
-            <SocialButton bgColor="instagram">
-              <EmailIcon className="w-5 h-5 text-black" />
-            </SocialButton>
-          </Link>
-
-          {/* Instagram */}
-          <Link
-            href="https://www.instagram.com/itstolexy"
-            target="_blank"
-            passHref
-          >
-            <SocialButton bgColor="instagram">
-              <Instagram className="w-5 h-5 text-black" />
-            </SocialButton>
-          </Link>
-
-          {/* Twitter */}
-          <Link href="https://x.com/itstolexy" target="_blank" passHref>
-            <SocialButton bgColor="twitter">
-              <Twitter className="w-5 h-5 text-black" />
-            </SocialButton>
-          </Link>
-
-          {/* LinkedIn */}
-          <Link
-            href="https://www.linkedin.com/in/omotola-odusanya"
-            target="_blank"
-            passHref
-          >
-            <SocialButton bgColor="linkedin">
-              <LinkedInIcon className="w-5 h-5 text-black" />
-            </SocialButton>
-          </Link>
+          {socialLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={link.ariaLabel}
+            >
+              <SocialButton bgColor={link.bgColor}>{link.icon}</SocialButton>
+            </Link>
+          ))}
         </div>
-        <Link href="mailto:odusanyaomotola64@gmail.com" target="_blank">
+        <Link
+          href="mailto:odusanyaomotola64@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Send an email"
+        >
           <p
             ref={emailRef}
             className={`outfit font-medium text-base mt-1 text-tola-green transition-opacity duration-700 ${
@@ -162,7 +170,7 @@ const Hero = () => {
 
       <div
         ref={buttonsRef}
-        className={`flex flex-col md:flex-row md:space-x-5 md:w-auto items-left transition-opacity duration-700 ${
+        className={`flex flex-col md:flex-row md:space-x-5 md:w-auto items-start transition-opacity duration-700 ${
           areButtonsVisible ? "opacity-100" : "opacity-0"
         }`}
       >
@@ -176,6 +184,8 @@ const Hero = () => {
           text="VIEW RESUME"
           icon={<DownloadForOfflineOutlinedIcon fontSize="large" />}
           target="_blank"
+          rel="noreferrer"
+          ariaLabel="View resume"
         />
       </div>
     </div>

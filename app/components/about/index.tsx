@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React, { useRef } from "react";
+import Image from "next/image";
 import { useIntersectionObserver } from "@/app/intersection";
 
 export default function About() {
@@ -82,16 +82,21 @@ export default function About() {
             isContentVisible ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="relative w-1/2 mx-auto md:mx-0 group">
-            <img
+          <div className="relative w-full md:w-1/2 mx-auto md:mx-0 group aspect-[3/4]">
+            <Image
               src="/images/tola.jpg"
-              alt="tola"
-              className="transition-opacity duration-300"
+              alt="Omotola portrait"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="rounded-lg object-cover transition-opacity duration-300"
+              priority
             />
-            <img
+            <Image
               src="/images/tola1.jpg"
-              alt="tola1"
-              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              alt="Omotola portrait alternate"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="rounded-lg object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             />
           </div>
 
@@ -140,7 +145,7 @@ export default function About() {
           >
             {technologies.map((tech, index) => (
               <h1
-                key={index}
+                key={tech}
                 className={`transition-transform duration-500 hover:scale-110 flex items-center justify-center min-md:w-40 w-fit min-w-32 p-2 text-sm border-2 rounded-3xl bg-tola-green border-transparent text-tola-white zilla ${
                   isTechVisible ? `animate-fade-in-up delay-${index * 100}` : ""
                 }`}

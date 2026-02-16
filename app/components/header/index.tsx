@@ -9,7 +9,7 @@ import CloseIcon from "@mui/icons-material/Close";
 export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  const menuIconRef = useRef<HTMLDivElement>(null);
+  const menuIconRef = useRef<HTMLButtonElement>(null);
 
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
@@ -56,13 +56,17 @@ export default function Header() {
         </Link>
 
         {/* Menu icon for small screens */}
-        <div
+        <button
           ref={menuIconRef}
           className="block lg:hidden cursor-pointer bg-tola-green"
           onClick={toggleMenu}
+          type="button"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
         >
           {isMenuOpen ? <CloseIcon /> : <MenuOutlinedIcon />}
-        </div>
+        </button>
 
         {/* Navigation menu for large screens - Fixed */}
         <ul className="zilla hidden lg:flex lg:flex-row lg:gap-12 text-lg items-center">
@@ -101,6 +105,7 @@ export default function Header() {
               href="/docs/Omotola_Odusanya-CV.pdf"
               download
               target="_blank"
+              rel="noreferrer"
               className="flex items-center space-x-2 p-2 border-2 rounded-lg bg-tola-white text-tola-green roboto animate-blink hover:animate-none"
             >
               <span className="text-lg">RESUME</span>
@@ -112,6 +117,7 @@ export default function Header() {
         {/* Dropdown menu for small screens */}
         <div
           ref={menuRef}
+          id="mobile-menu"
           className={`fixed top-16 right-0 w-[50%] h-[calc(100vh-4rem)] bg-tola-green text-tola-white z-40 transition-all duration-500 ease-in-out transform ${
             isMenuOpen
               ? "opacity-100 visible translate-x-0"
@@ -162,6 +168,7 @@ export default function Header() {
                 href="/docs/Omotola_Odusanya-CV.pdf"
                 download
                 target="_blank"
+                rel="noreferrer"
                 onClick={() => setMenuOpen(false)}
               >
                 Resume

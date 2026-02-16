@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface ProjectCardProps {
   imgSrc: string;
@@ -18,7 +19,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div className="flex flex-col p-4 bg-tola-white rounded-2xl perspective">
       <div className="bend-left">
-        <img src={imgSrc} alt={altText} className="rounded-lg shadow-md" />
+        <Image
+          src={imgSrc}
+          alt={altText}
+          width={640}
+          height={420}
+          className="rounded-lg shadow-md w-full h-auto"
+          sizes="(min-width: 768px) 50vw, 100vw"
+        />
         <p className="text-base roboto text-black my-2 pt-4 px-4 font-medium">
           {description}
         </p>
