@@ -158,11 +158,11 @@ const Hero = () => {
           isDescriptionVisible ? "opacity-100" : "opacity-0"
         }`}
       >
-        I am a frontend developer passionate about turning designs into fully
-        functional web and mobile applications with clean, user-friendly
-        interfaces. I focus on building responsive, visually appealing layouts
-        that provide intuitive navigation and smooth interactions, ensuring a
-        high-quality user experience.
+        I am a frontend and mobile developer (Expo) passionate about turning
+        designs into fully functional web and mobile applications with clean,
+        user-friendly interfaces. I focus on building responsive, visually
+        appealing layouts that provide intuitive navigation and smooth
+        interactions, ensuring a high-quality user experience.
         <br />I am committed to creating modern, accessible, and performant
         applications, and I continuously learn and adopt the latest trends and
         best practices in web and mobile development.

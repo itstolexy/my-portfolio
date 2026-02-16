@@ -102,12 +102,13 @@ export default function About() {
 
           <div className="md:w-1/2 w-full space-y-6 outfit text-lg border border-tola-green rounded-3xl p-4 md:mr-16 md:ml-0 ml-0 mt-7 md:mt-0">
             <p>
-              I am a dedicated Frontend Developer with over two years of
-              hands-on experience in the software development industry. I
-              specialize in creating responsive, user-friendly, and visually
-              appealing web interfaces. I am passionate about leveraging
-              technology to simplify life and delivering applications with
-              intuitive, seamless experiences to users globally.
+              I am a dedicated frontend and mobile developer (Expo) with over
+              three years of hands-on experience in the software development
+              industry. I specialize in creating responsive, user-friendly, and
+              visually appealing web and mobile interfaces. I am passionate
+              about leveraging technology to simplify life and delivering
+              applications with intuitive, seamless experiences to users
+              globally.
             </p>
 
             <p>
