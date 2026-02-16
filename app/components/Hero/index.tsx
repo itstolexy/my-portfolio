@@ -172,7 +172,7 @@ const Hero = () => {
           icon={<InfoOutlinedIcon fontSize="large" />}
         /> */}
         <Button
-          href="https://drive.google.com/file/d/1C17sJkxw05dwwmXoy9TLl3J8shpu-n6O/view?usp=drivesdk"
+          href="https://drive.google.com/file/d/1mtvg-70SoabH8TIfd8L-2sR7dQWO6AgC/view?usp=drivesdk"
           text="VIEW RESUME"
           icon={<DownloadForOfflineOutlinedIcon fontSize="large" />}
           target="_blank"
